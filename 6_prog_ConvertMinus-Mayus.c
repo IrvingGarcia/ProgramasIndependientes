@@ -1,25 +1,26 @@
-/*Autor: Irving Efren Garcia Ramos                    */
-/*E-mail: irvin.16@outlook.es                         */
-/*Fecha de creacion:19/04/2018                       */
-/*Feha de modificacion: 20/04/2018                   */
+/*Autor:Edgar Alejandro Hernandez Hernandez           */
+/*E-mail:edgarh2014.94@gmail.com                      */
+/*Fecha de creacion:19/04/2018                        */
+/*Feha de modificacion:                               */
 /*Descripcion:Convertir de minuscula a mayuscula y de
 y de mayuscula a miniscula */
 
 
 /*Declaración de la biblioteca estandar*/
 #include <stdio.h>
+#include <conio.h>
 
 /*Definicion de constante*/
-const int tam = 10;
+const int tamanio = 5;
 
 /*Declaración de la función principal*/
 int main(void)
 {
    char c;
-   char array[tam],arreglo[tam];
+   char array[tamanio],ar[tamanio];
    int index = 0;
    // De minuscula a mayuscula
-   printf("Ingrese en palabra en MINUSCULA: ");
+   printf("palabra en MINUSCULA: ");
 
    while ((c = getchar()) != '\n')
    {
@@ -32,21 +33,21 @@ int main(void)
    }
    printf("\n");
 
-   for (int i = 0; i < tam; i++)
+   for (int i = 0; i < tamanio; i++)
    {
        printf("%c", array[i]);
    }
    printf("\n");
    // De mayusculas a minusculas
    index = 0;
-  printf("Ingrese en palabra en MAYUSCULAS: ");
+  printf("palabra en MAYUSCULAS: ");
 
   while ((c = getchar()) != '\n')
   {
       if(c >=65 && c <=90)
       {
             c = c+32;
-            arreglo[index] = c;
+            ar[index] = c;
             index ++;
       }
    }
@@ -58,5 +59,6 @@ int main(void)
    }
    printf("\n");
 
+   getch();
    return 0;
    }
